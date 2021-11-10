@@ -116,8 +116,8 @@ def evaluate_robustness(model, policies, SOWs=1000, in_place=True, return_all=Fa
     
     result["Regret Type 1"] = [regret_type1(model, all_results[i], policies[i]) for i in range(n)]
     result["Regret Type 2"] = [regret_type2(model, all_results, all_results[i]) for i in range(n)]
-    result["Satisficing Type 1"] = [satisficing_type1(model, all_results[i]) for i in range(n)]
-    result["Satisficing Type 2"] = [satisficing_type2(model, all_results[i], policies[i]) for i in range(len(policies))]
+    #result["Satisficing Type 1"] = [satisficing_type1(model, all_results[i]) for i in range(n)]
+    #result["Satisficing Type 2"] = [satisficing_type2(model, all_results[i], policies[i]) for i in range(len(policies))]
     
     if return_all:
         return SOWs, result, all_results
